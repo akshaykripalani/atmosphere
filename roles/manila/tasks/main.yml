@@ -28,6 +28,8 @@
     release_namespace: "{{ manila_helm_release_namespace }}"
     create_namespace: true
     kubeconfig: "{{ manila_helm_kubeconfig }}"
+    wait: true
+    wait_timeout: 20m
     values: "{{ _manila_helm_values | combine(manila_helm_values, recursive=True) }}"
 
 - name: Create Ingress
