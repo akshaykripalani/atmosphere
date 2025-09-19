@@ -1,0 +1,7 @@
+---
+description: Necessary context for project work
+globs:
+alwaysApply: true
+---
+
+- The codebase is the source code for Atmosphere, by Vexxhost. A kuberenetes based openstakc implementation. The current scope of the project is to deploy this existing codebase in AIO mode a baremetal machine. Deployment has been tested on virtual machines and succeeds, however on baremetal it consistently fails to. This is because the AIO project has not been maintained by Vexxhost. The conversations will focus on fixing these specific issues.
