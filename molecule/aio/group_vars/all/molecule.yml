@@ -1,5 +1,10 @@
 atmosphere_image_prefix: "{{ lookup('env', 'ATMOSPHERE_IMAGE_PREFIX') | default('', True) }}"
 
+kubelet_node_ip: >-
+  {{ ansible_default_ipv4.address
+     | default(ansible_facts.get('default_ipv4', {}).get('address'), true)
+     | default((ansible_all_ipv4_addresses | default([])) | difference(['127.0.0.1']) | first, true) }}
+
 ceph_version: 18.2.7
 ceph_conf_overrides:
   - section: global
