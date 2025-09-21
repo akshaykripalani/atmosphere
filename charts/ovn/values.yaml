@@ -200,7 +200,7 @@ conf:
 pod:
   # NOTE: should be same as nova.pod.use_fqdn.compute
   use_fqdn:
-    compute: true
+    compute: false
   security_context:
     ovn_northd:
       container:

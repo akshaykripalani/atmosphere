@@ -2305,7 +2305,7 @@ pod:
     # host name by default. If the short name is desired $(hostname --short),
     # set the option to false. Specifying a host in the nova.conf via the conf:
     # section will supersede the value of this option.
-    compute: true
+    compute: false
   affinity:
     anti:
       type:

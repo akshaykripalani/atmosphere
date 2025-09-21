@@ -430,7 +430,7 @@ pod:
   sidecars:
     neutron_policy_server: false
   use_fqdn:
-    neutron_agent: true
+    neutron_agent: false
   probes:
     rpc_timeout: 60
     rpc_retries: 2
