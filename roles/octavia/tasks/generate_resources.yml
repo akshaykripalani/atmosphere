@@ -88,7 +88,7 @@
     set -o posix
     source /etc/profile.d/atmosphere.sh
     openstack port set \
-      --host {{ hostvars[item]['ansible_fqdn'] }} \
+      --host {{ hostvars[item]['inventory_hostname_short'] }} \
       octavia-health-manager-port-{{ hostvars[item]['inventory_hostname_short'] }}
   args:
     executable: /bin/bash
